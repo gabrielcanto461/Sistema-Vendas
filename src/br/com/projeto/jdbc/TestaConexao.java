@@ -4,6 +4,7 @@
  */
 package br.com.projeto.jdbc;
 
+import java.awt.HeadlessException;
 import javax.swing.JOptionPane;
 
 /**
@@ -20,7 +21,7 @@ public class TestaConexao {
             JOptionPane.showMessageDialog(null, "Conectado com sucesso!");
             
             
-        } catch (Exception erro) {
+        } catch (HeadlessException erro) {
             JOptionPane.showMessageDialog(null, "Ops! Ocorreu o erro: "+ erro);
         }
      

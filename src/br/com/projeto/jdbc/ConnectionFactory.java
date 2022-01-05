@@ -6,26 +6,23 @@ package br.com.projeto.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 /**
  *
  * @author gabri
  */
 public class ConnectionFactory {
-    
-    public Connection getConnection(){
-        
-        try {      
-                   
-                               
-            
-            return DriverManager.getConnection("jdbc:mysql://127.0.0.1/bdvendas", "testeGabriel", "123");
-                    
-        } catch (Exception erro) {
+
+    public Connection getConnection() {
+
+        try {
+
+            return DriverManager.getConnection("jdbc:mysql://127.0.0.1/bdvendas?verifyServerCertificate=false&useSSL=true", "testeGabriel", "AW79-%uh");
+
+        } catch (SQLException erro) {
             throw new RuntimeException(erro);
         }
-        
-        
-        
+
     }
 }
